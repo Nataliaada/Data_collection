@@ -3,17 +3,13 @@ from pymongo import MongoClient
 
 
 
-client = MongoClient("mongodb://localhost:27017/")
-
-db = client['books']
-collection = db['books_op']
-
 with open('books.json', 'r', encoding='utf-8') as file:
   data = json.load(file)
 # print(data[0])
 
 client = MongoClient("mongodb://localhost:27017/")
 db = client['my_books_database']
+
 
 
 collection_name = "Список книг"
